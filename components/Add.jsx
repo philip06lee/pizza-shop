@@ -44,7 +44,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("https://gogo-best-philip06lee.vercel.app/api/products", newProduct);
+      await axios.post("https://gogo-best.vercel.app/api/products", newProduct);
       setClose(true);
     } catch (err) {
       console.log(err);

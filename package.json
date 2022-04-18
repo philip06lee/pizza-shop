@@ -2,7 +2,7 @@
   "name": "pizza",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://gogo-best-philip06lee.vercel.app/admin", 
+  "proxy": "https://gogo-best.vercel.app/admin", 
 
   "scripts": {
     "dev": "next dev",

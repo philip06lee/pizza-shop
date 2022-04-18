@@ -33,10 +33,10 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("https://gogo-best-philip06lee.vercel.app/api/products");
+  const res = await axios.get("https://gogo-best.vercel.app/api/products");
   return {
     props: {
-      pizzaList: res.data,
+      pizzaList: res.data,  
       admin,
     },
   };

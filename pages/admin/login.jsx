@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("https://gogo-best-philip06lee.vercel.app/api/login", {
+      await axios.post("https://gogo-best.vercel.app/api/login", {
         username,
         password,
       });

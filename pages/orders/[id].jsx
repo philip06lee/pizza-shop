@@ -114,7 +114,7 @@ const Order = ({ order }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`https://gogo-best-philip06lee.vercel.app/api/orders/${params.id}`);
+  const res = await axios.get(`https://gogo-best.vercel.app/api/orders/${params.id}`);
   return {
     props: { order: res.data },
   };

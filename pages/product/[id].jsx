@@ -97,7 +97,7 @@ const Product = ({ pizza }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://gogo-best-philip06lee.vercel.app/api/products/${params.id}`
+    `https://gogo-best.vercel.app/api/products/${params.id}`
   );
   return {
     props: {
