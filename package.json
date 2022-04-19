@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
 
-  "proxy": "https://api.cloudinary.com" 
+  "proxy": "https://gogo-best.vercel.app/api/" 
 
    "scripts": {
     "dev": "next dev",
