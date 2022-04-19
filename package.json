@@ -2,9 +2,10 @@
   "name": "pizza",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://gogo-best.vercel.app/admin", 
 
-  "scripts": {
+  "proxy": "https://api.cloudinary.com" 
+
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
