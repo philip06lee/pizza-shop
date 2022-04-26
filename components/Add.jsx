@@ -31,7 +31,7 @@ const Add = ({ setClose }) => {
     data.append("upload_preset", "uploads");
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/gogofinest/image/upload",
+        "https://api.cloudinary.com/v1_1/dsbyq4sj1/image/upload",
         data
       );
 
@@ -44,7 +44,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("https://gogo-best.vercel.app/api/products", newProduct);
+      await axios.post("http://localhost:3000/api/products", newProduct);
       setClose(true);
     } catch (err) {
       console.log(err);

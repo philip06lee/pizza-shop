@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/PizzaCard.module.css";
 import Link from "next/link";
 
+
 const PizzaCard = ({ pizza }) => {
   return (
     <div className={styles.container}>

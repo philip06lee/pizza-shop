@@ -17,14 +17,14 @@ const Cart = () => {
   const [open, setOpen] = useState(false);
   const [cash, setCash] = useState(false);
   const amount = cart.total;
-  const currency = "SGD";
+  const currency = "USD";
   const style = { layout: "vertical" };
   const dispatch = useDispatch();
   const router = useRouter();
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("https://gogo-best.vercel.app/api/orders", data);
+      const res = await axios.post("http://localhost:3000/api/orders", data);
       if (res.status === 201) {
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);
@@ -129,10 +129,10 @@ const Cart = () => {
                   </span>
                 </td>
                 <td>
-                  <span className={styles.price}>${product.price}</span>
+                  <span className={styles.total}>${product.price}</span>
                 </td>
                 <td>
-                  <span className={styles.quantity}>{product.quantity}</span>
+                  <span className={styles.total}>{product.quantity}</span>
                 </td>
                 <td>
                   <span className={styles.total}>
@@ -146,8 +146,7 @@ const Cart = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.wrapper}>
-          <h2 className={styles.payTitle}>CART TOTAL</h2>
-          <h4 className={styles.payTitle}>By Cash, PayPal or Credit Card</h4>
+          <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Subtotal:</b>${cart.total}
           </div>
@@ -167,9 +166,10 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                  "client-id": "ARczeMWlxM7FbwG40vZ0kYqklKkqh1aS3-8_1293NjV-aZM17oTBqNMEClZdITtgkdikjJHuUymVKC_l",
+                  "client-id":
+                  "test",
                   components: "buttons",
-                  currency: "SGD",
+                  currency: "USD",
                   "disable-funding": "credit,card,p24",
                 }}
               >
